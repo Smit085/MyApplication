@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 
 class MainActivity : AppCompatActivity() {
     private var click:Int = 0
@@ -27,8 +28,14 @@ class MainActivity : AppCompatActivity() {
             R.id.action_color -> {
                 click++
                 click = click % 4
-                var view: ConstraintLayout = findViewById(R.id.constraint)
-//                view.setBackgroundColor()
+                var view: CoordinatorLayout = findViewById(R.id.constraint)
+                when(click){
+                    0 -> view.setBackgroundColor(getColor(R.color.orange))
+                    1 -> view.setBackgroundColor(getColor(R.color.green))
+                    2 -> view.setBackgroundColor(getColor(R.color.violet))
+                    3 -> view.setBackgroundColor(getColor(R.color.cyan))
+                    4 -> view.setBackgroundColor(getColor(R.color.yellow))
+                }
                 true
             }
             R.id.action_toast -> {
