@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 
 class MainActivity : AppCompatActivity() {
     private var click:Int = 0
-    private var colors = arrayOf("#00BCD4","8BC34A","#FFEB3B","9C27B0","#6CB027")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
